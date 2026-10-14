@@ -51,4 +51,4 @@ Network/real-data tests skip themselves (set `WOWHARNESS_MMAPS` to a folder of s
 
 ## Licence
 
-See `LICENSE` (placeholder until the owner picks one). `native/detour/` stays under zlib.
+MIT, see `LICENSE`. `native/detour/` stays under zlib.
