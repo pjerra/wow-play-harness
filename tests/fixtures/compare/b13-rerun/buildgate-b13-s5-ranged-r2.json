@@ -1,0 +1,47 @@
+{
+  "gate": "tortoisebots-buildgate",
+  "label": "b13-s5-ranged-r2",
+  "character": "Tagentone",
+  "started": "2026-10-12T15:11:50+00:00",
+  "seconds": 39.9,
+  "verdict": "pass",
+  "scenarios": [
+    {
+      "name": "ranged_reach_in_dungeon",
+      "verdict": "pass",
+      "seconds": 42.0,
+      "evidence": [
+        "Hucro: longest reach standstill 0 s (limit 10 s)",
+        "Sorbraed: longest reach standstill 0 s (limit 10 s)",
+        "reply: Bot Dutroth will attack your selected target."
+      ],
+      "metrics": {
+        "longest_standstill_s": {
+          "Hucro": 0,
+          "Sorbraed": 0
+        },
+        "samples": 25
+      }
+    }
+  ],
+  "teardown": {
+    "steps": [
+      "stop_attack: ok",
+      "kill leftovers: ok",
+      ".gm on: ok",
+      "safe spot: ok"
+    ],
+    "result": "kept in world"
+  },
+  "commands": [
+    ".gm on",
+    ".gm on",
+    ".tele ulda",
+    ".gm off",
+    "teleport (-236.4, 60.4, -46.0) map 70",
+    ".bot attack Dutroth",
+    ".gm on",
+    ".gm on",
+    ".tele ulda"
+  ]
+}

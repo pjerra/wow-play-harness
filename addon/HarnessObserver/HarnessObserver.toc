@@ -1,0 +1,5 @@
+## Interface: 11200
+## Title: HarnessObserver
+## Notes: HX| state lines and a copy of the combat log and chat for the play harness (SavedVariables HXDB, and live through a pixel strip at the top-left).
+## SavedVariables: HXDB
+HarnessObserver.lua

@@ -1,0 +1,3 @@
+LICENSE PLACEHOLDER: the owner has not chosen a license yet (suggested: MIT).
+Replace this file with the full license text before publishing.
+The vendored native/detour/ code (recastnavigation) stays under its own zlib license, see native/detour/License.txt.

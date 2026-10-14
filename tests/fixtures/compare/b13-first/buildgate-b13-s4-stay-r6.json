@@ -1,0 +1,49 @@
+{
+  "gate": "tortoisebots-buildgate",
+  "label": "b13-s4-stay-r6",
+  "character": "Tagentone",
+  "started": "2026-10-12T15:01:41+00:00",
+  "seconds": 91.8,
+  "verdict": "fail",
+  "scenarios": [
+    {
+      "name": "stay_then_order_follows",
+      "verdict": "fail",
+      "seconds": 95.6,
+      "evidence": [
+        "Brenigria moved 0.0 yd during/after the walk, ended 30.5 yd from the leader (needs <= 10 yd and >= 10 yd moved); last action 'blade flurry'",
+        "after `stay`: Brenigria strategies show no stay, hold follow",
+        "attack target: Stonevault Oracle 0xF1300012F40082F6 at (-274.2,62.4)",
+        "reply: Bot Brenigria will attack your selected target."
+      ],
+      "metrics": {
+        "moved_yd": 0.0,
+        "final_yd": 30.5,
+        "follow_after": null
+      }
+    }
+  ],
+  "teardown": {
+    "steps": [
+      "stop_attack: ok",
+      "kill leftovers: ok",
+      ".gm on: ok",
+      "safe spot: ok"
+    ],
+    "result": "kept in world"
+  },
+  "commands": [
+    ".gm on",
+    ".gm on",
+    ".tele ulda",
+    ".gm off",
+    "teleport (-236.0, 61.0, -46.0) map 70",
+    "/w Brenigria stay",
+    ".bot attack Brenigria",
+    "walk to (-211.0, 63.0, -46.0) map 70 (25 yd, 2 legs)",
+    "/w Brenigria follow",
+    ".gm on",
+    ".gm on",
+    ".tele ulda"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "_note": "Build gate scenario config for Uldaman (map 70). Coordinates are from the 2026-10-12 manual runs; z values are the server FloorZ from .gps on gameserver build 13 (2026-10-12 live gate run). Packs are the instance's own Stonevault Oracles (4852): on gameserver every Stonevault Rockchewer (4851) has faction 35 (friendly) since this afternoon, so bots refuse to attack them. No credentials here: turtle-agent keeps its own, the dashboard login comes from the environment or ~/.wowharness.json.",
+  "dungeon": {"map": 70, "enter": {"tele": "ulda", "map": 70}},
+  "safe": {"tele": "ulda", "map": 70},
+  "start": {"tele": "Badlands", "map": 0},
+  "party": [
+    {"key": "tank", "class": "warrior", "hire": "warrior tank"},
+    {"key": "healer", "class": "priest", "hire": "priest holy"},
+    {"key": "mage", "class": "mage", "hire": "mage frost"},
+    {"key": "rogue", "class": "rogue", "hire": "rogue combat"}
+  ],
+  "budget_s": 2040,
+  "sample_s": 1.0,
+  "scenarios": {
+    "follow_into_dungeon": {"within_s": 20},
+    "stay_then_order_follows": {
+      "bot": "rogue",
+      "spot": {"x": -236.0, "y": 61.0, "z": -46.0, "map": 70},
+      "mob_entry": 4852,
+      "mob_hp": 800,
+      "walk_to": {"x": -211.0, "y": 63.0, "z": -46.0, "map": 70},
+      "follow_max_yd": 10
+    },
+    "healer_follows_ooc": {
+      "healer": "healer",
+      "start_spot": {"x": -250.0, "y": 62.3, "z": -46.2, "map": 70},
+      "end_spot": {"x": -205.2, "y": 62.7, "z": -46.4, "map": 70},
+      "end_max_yd": 15,
+      "stall_s": 20
+    },
+    "ranged_reach_in_dungeon": {
+      "gm_off": true,
+      "spot": {"x": -236.4, "y": 60.4, "z": -46.0, "map": 70},
+      "pull_at": {"x": -275.4, "y": 62.2, "z": -48.3, "map": 70},
+      "pull_entries": [4852],
+      "casters": ["healer", "mage"],
+      "standstill_s": 10
+    },
+    "moon_sheep_lands": {
+      "mage": "mage",
+      "gm_off": true,
+      "spot": {"x": -208.0, "y": 63.0, "z": -46.0, "map": 70},
+      "pack_at": {"x": -168.7, "y": 70.7, "z": -48.3, "map": 70},
+      "pack_entries": [4852, 4852],
+      "moon_index": 0,
+      "pull_index": 1,
+      "within_s": 10
+    },
+    "no_jumps_in_dungeon": {
+      "route": [
+        {"x": -236.4, "y": 60.4, "z": -46.0, "map": 70},
+        {"x": -210.0, "y": 62.5, "z": -46.0, "map": 70},
+        {"x": -236.4, "y": 60.4, "z": -46.0, "map": 70}
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "gate": "tortoisebots-buildgate",
+  "label": "b13-s2-follow-r2",
+  "character": "Tagentone",
+  "started": "2026-10-12T14:45:40+00:00",
+  "seconds": 21.1,
+  "verdict": "pass",
+  "scenarios": [
+    {
+      "name": "follow_into_dungeon",
+      "verdict": "pass",
+      "seconds": 21.3,
+      "evidence": [
+        "Dutroth: on map 70 at +9.8 s",
+        "Dutroth: strategies hold follow",
+        "Hucro: on map 70 at +9.8 s",
+        "Hucro: strategies hold follow",
+        "Sorbraed: on map 70 at +9.8 s",
+        "Sorbraed: strategies hold follow",
+        "Brenigria: on map 70 at +9.8 s",
+        "Brenigria: strategies hold follow",
+        "before: Dutroth strategies hold follow",
+        "before: Hucro strategies hold follow",
+        "before: Sorbraed strategies hold follow",
+        "before: Brenigria strategies hold follow"
+      ],
+      "metrics": {
+        "arrival_s": {
+          "Dutroth": 9.8,
+          "Hucro": 9.8,
+          "Sorbraed": 9.8,
+          "Brenigria": 9.8
+        },
+        "watched_s": 9.8
+      }
+    }
+  ],
+  "teardown": {
+    "steps": [
+      "stop_attack: ok",
+      "kill leftovers: ok",
+      ".gm on: ok",
+      "safe spot: ok"
+    ],
+    "result": "kept in world"
+  },
+  "commands": [
+    ".gm on",
+    ".tele Badlands",
+    ".bot summon Dutroth",
+    ".bot summon Hucro",
+    ".bot summon Sorbraed",
+    ".bot summon Brenigria",
+    ".tele ulda",
+    ".gm on",
+    ".gm on",
+    ".tele ulda"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "gate": "tortoisebots-buildgate",
+  "label": "b13-s2-follow",
+  "character": "Tagentone",
+  "started": "2026-10-12T14:44:27+00:00",
+  "seconds": 33.2,
+  "verdict": "fail",
+  "scenarios": [
+    {
+      "name": "follow_into_dungeon",
+      "verdict": "fail",
+      "seconds": 33.4,
+      "evidence": [
+        "Hucro: not on map 70 within 20 s of the teleport (last map 0 (-6774.7,-3422.8))",
+        "Dutroth: on map 70 at +5.3 s",
+        "Dutroth: strategies hold follow",
+        "Sorbraed: on map 70 at +5.3 s",
+        "Sorbraed: strategies hold follow",
+        "Brenigria: on map 70 at +5.3 s",
+        "Brenigria: strategies hold follow",
+        "before: Dutroth strategies hold follow",
+        "before: Hucro strategies hold follow",
+        "before: Sorbraed strategies hold follow",
+        "before: Brenigria strategies hold follow"
+      ],
+      "metrics": {
+        "arrival_s": {
+          "Dutroth": 5.3,
+          "Sorbraed": 5.3,
+          "Brenigria": 5.3
+        },
+        "watched_s": 22.1
+      }
+    }
+  ],
+  "teardown": {
+    "steps": [
+      "stop_attack: ok",
+      "kill leftovers: ok",
+      ".gm on: ok",
+      "safe spot: ok"
+    ],
+    "result": "kept in world"
+  },
+  "commands": [
+    ".gm on",
+    ".tele Badlands",
+    ".bot summon Dutroth",
+    ".bot summon Hucro",
+    ".bot summon Sorbraed",
+    ".bot summon Brenigria",
+    ".tele ulda",
+    ".gm on",
+    ".gm on",
+    ".tele ulda"
+  ]
+}

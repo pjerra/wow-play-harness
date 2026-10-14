@@ -1,0 +1,14 @@
+# tests/fixtures/combat_sample.txt
+10/11 21:03:40.120  Gorm hits Kobold Vermin for 12.
+10/11 21:03:40.500  Gorm crits Kobold Vermin for 25.
+10/11 21:03:41.010  You hit Kobold Vermin for 9.
+10/11 21:03:41.300  Kobold Vermin hits Gorm for 4.
+10/11 21:03:42.000  Lia begins to cast Lesser Heal.
+10/11 21:03:44.500  Lia's Lesser Heal heals Gorm for 48.
+10/11 21:03:45.000  Your Fireball hits Kobold Vermin for 33 Fire damage.
+10/11 21:03:45.100  Lia's Shadow Word: Pain hits Mor'Ladim for 20 Shadow damage.
+10/11 21:03:45.600  Lia casts Power Word: Fortitude on Gorm.
+10/11 21:03:46.000  Gorm gains Battle Shout.
+10/11 21:03:47.000  Kobold Vermin dies.
+10/11 21:03:47.010  You have slain Kobold Vermin!
+10/11 21:03:47.500  Something odd happened.

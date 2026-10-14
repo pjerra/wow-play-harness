@@ -1,0 +1,42 @@
+{
+  "gate": "tortoisebots-buildgate",
+  "label": "b13-s3-healer",
+  "character": "Tagentone",
+  "started": "2026-10-12T14:46:07+00:00",
+  "seconds": 21.0,
+  "verdict": "pass",
+  "scenarios": [
+    {
+      "name": "healer_follows_ooc",
+      "verdict": "pass",
+      "seconds": 19.4,
+      "evidence": [
+        "Hucro ended 2.3 yd from the leader (max 19.9 yd), last action 'check values'"
+      ],
+      "metrics": {
+        "final_yd": 2.3,
+        "max_yd": 19.9,
+        "longest_reach_standstill_s": 0
+      }
+    }
+  ],
+  "teardown": {
+    "steps": [
+      "stop_attack: ok",
+      "kill leftovers: ok",
+      ".gm on: ok",
+      "safe spot: ok"
+    ],
+    "result": "kept in world"
+  },
+  "commands": [
+    ".gm on",
+    "teleport (-250.0, 62.3, -46.2) map 70",
+    ".bot summon Dutroth",
+    ".bot summon Sorbraed",
+    "walk to (-205.2, 62.7, -46.4) map 70 (45 yd, 3 legs)",
+    ".gm on",
+    ".gm on",
+    ".tele ulda"
+  ]
+}

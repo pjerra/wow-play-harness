@@ -1,0 +1,10 @@
+{"seq": 1, "time": "2026-10-12T19:54:13.000000+02:00", "kind": "system", "text": "TBM:ACTION_ACK|pull|party|1|Mage body-pull", "data": {"type": "system"}}
+{"seq": 2, "time": "2026-10-12T19:54:15.200000+02:00", "kind": "spell_start", "source": "Mage", "source_guid": "0x0000000000000209", "target": "Ruffian", "target_guid": "0xF1300012ED001C31", "spell_id": 118, "party": true, "data": {"cast_ms": 1500}}
+{"seq": 3, "time": "2026-10-12T19:54:16.900000+02:00", "kind": "spell_go", "source": "Mage", "source_guid": "0x0000000000000209", "target": "Ruffian", "target_guid": "0xF1300012ED001C31", "spell_id": 118, "party": true, "data": {"hits": 1}}
+{"seq": 4, "time": "2026-10-12T19:54:17.000000+02:00", "kind": "aura_applied", "target": "Ruffian", "target_guid": "0xF1300012ED001C31", "spell_id": 118, "data": {"harmful": true, "slot": 0}}
+{"seq": 5, "time": "2026-10-12T19:54:18.100000+02:00", "kind": "melee", "source": "Ruffian", "source_guid": "0xF1300012ED001C31", "target": "Tank", "target_guid": "0x000000000000020A", "amount": 40, "party": true, "data": {"outcome": "normal"}}
+{"seq": 6, "time": "2026-10-12T19:54:19.000000+02:00", "kind": "periodic", "source": "Mage", "source_guid": "0x0000000000000209", "target": "Mage", "target_guid": "0x0000000000000209", "spell_id": 1, "amount": 9, "party": true, "data": {"tick": "energize"}}
+{"seq": 7, "time": "2026-10-12T19:54:22.000000+02:00", "kind": "heal", "source": "Priest", "source_guid": "0x000000000000020B", "target": "Tank", "target_guid": "0x000000000000020A", "spell_id": 2060, "amount": 900, "party": true}
+{"seq": 8, "time": "2026-10-12T19:54:24.500000+02:00", "kind": "spell_fail", "source": "Mage", "source_guid": "0x0000000000000209", "spell_id": 118, "party": true, "data": {"reason": "interrupted"}}
+{"seq": 9, "time": "2026-10-12T19:54:26.000000+02:00", "kind": "death", "source": "Ruffian", "source_guid": "0xF1300012ED001C31"}
+{"seq": 10, "time": "2026-10-12T19:54:27.000000+02:00", "kind": "chat", "source": "Priest", "source_guid": "0x000000000000020B", "party": true, "text": "oom", "data": {"type": "party"}}

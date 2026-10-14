@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.superpowers/
+.env
+.wowharness.json
+config.json
+docs/evidence/*.png
+wowharness/native/*.so

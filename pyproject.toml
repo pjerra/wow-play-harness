@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wowharness"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["mcp<2", "requests", "Pillow", "pywin32; sys_platform == 'win32'"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools]
+packages = ["wowharness"]
+
+[tool.setuptools.package-data]
+wowharness = ["native/*.dll", "native/*.so"]

@@ -1,0 +1,16 @@
+{
+  "client_dir": "C:\\Games\\WoW-1.18.1",
+  "server_host": "192.0.2.10",
+  "soap_port": 7878,
+  "soap_user": "<GM account with SOAP access>",
+  "soap_password": "<its password>",
+  "account": "<human game account, never a bot account>",
+  "password": "<its password>",
+  "login_account_xy": [0.5, 0.53],
+  "login_password_xy": [0.5, 0.62],
+  "server_container": "mangosd",
+  "server_ssh": [],
+  "dashboard_url": "",
+  "dashboard_user": "",
+  "dashboard_password": ""
+}

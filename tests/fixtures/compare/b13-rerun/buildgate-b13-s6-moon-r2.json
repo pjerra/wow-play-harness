@@ -1,0 +1,57 @@
+{
+  "gate": "tortoisebots-buildgate",
+  "label": "b13-s6-moon-r2",
+  "character": "Tagentone",
+  "started": "2026-10-12T15:13:09+00:00",
+  "seconds": 56.9,
+  "verdict": "fail",
+  "scenarios": [
+    {
+      "name": "moon_sheep_lands",
+      "verdict": "fail",
+      "seconds": 58.4,
+      "evidence": [
+        "2 party hit(s) on the Moon mob before it was sheeped; first: Dutroth -> Stonevault Oracle damage 73",
+        "  Dutroth -> Stonevault Oracle damage 79",
+        "Polymorph by Sorbraed: 4 starts, 4 completions (4 on the Moon mob)",
+        "first Polymorph on the Moon mob completed 9.8 s after the pull",
+        "cc order reply: TBM:ACTION_ACK|cc moon Sorbraed|bot:Sorbraed|1|Sorbraed",
+        "reply: Brenigria is following Tagentone.",
+        "reply: TBM:ACTION_ACK|cc moon Sorbraed|bot:Sorbraed|1|Sorbraed",
+        "reply: Bot Dutroth will attack your selected target."
+      ],
+      "metrics": {
+        "polymorph_starts": 4,
+        "polymorph_completions": 4,
+        "completions_on_moon": 4,
+        "first_start_s": 8.2,
+        "first_completion_s": 9.8,
+        "party_hits_before_sheep": 2
+      }
+    }
+  ],
+  "teardown": {
+    "steps": [
+      "stop_attack: ok",
+      "kill leftovers: ok",
+      ".gm on: ok",
+      "safe spot: ok"
+    ],
+    "result": "kept in world"
+  },
+  "commands": [
+    ".gm on",
+    ".gm on",
+    ".tele ulda",
+    ".gm off",
+    "teleport (-208.0, 63.0, -46.0) map 70",
+    ".bot summon Hucro",
+    ".bot summon Brenigria",
+    ".bot action cc moon Sorbraed",
+    ".bot attack Dutroth",
+    ".bot action cc clear Sorbraed",
+    ".gm on",
+    ".gm on",
+    ".tele ulda"
+  ]
+}

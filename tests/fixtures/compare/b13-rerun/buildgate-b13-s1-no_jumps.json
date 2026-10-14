@@ -1,0 +1,46 @@
+{
+  "gate": "tortoisebots-buildgate",
+  "label": "b13-s1-no_jumps",
+  "character": "Tagentone",
+  "started": "2026-10-12T14:43:56+00:00",
+  "seconds": 25.1,
+  "verdict": "pass",
+  "scenarios": [
+    {
+      "name": "no_jumps_in_dungeon",
+      "verdict": "pass",
+      "seconds": 25.3,
+      "evidence": [
+        "47 bot rows on map 70, no jump action",
+        "read all 12 dashboard samples of this gate run (8 from this scenario's own walk)"
+      ],
+      "metrics": {
+        "dungeon_bot_rows": 47,
+        "jumps": 0
+      }
+    }
+  ],
+  "teardown": {
+    "steps": [
+      "stop_attack: ok",
+      "kill leftovers: ok",
+      ".gm on: ok",
+      "safe spot: ok"
+    ],
+    "result": "kept in world"
+  },
+  "commands": [
+    ".bot hire warrior tank",
+    ".bot hire priest holy",
+    ".bot hire mage frost",
+    ".bot hire rogue combat",
+    ".gm on",
+    ".bot summon Brenigria",
+    "teleport (-236.4, 60.4, -46.0) map 70",
+    "walk to (-210.0, 62.5, -46.0) map 70 (26 yd, 2 legs)",
+    "walk to (-236.4, 60.4, -46.0) map 70 (26 yd, 2 legs)",
+    ".gm on",
+    ".gm on",
+    ".tele ulda"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "gate": "tortoisebots-buildgate",
+  "label": "b13-s5-ranged",
+  "character": "Tagentone",
+  "started": "2026-10-12T15:09:40+00:00",
+  "seconds": 92.5,
+  "verdict": "inconclusive",
+  "scenarios": [
+    {
+      "name": "ranged_reach_in_dungeon",
+      "verdict": "inconclusive",
+      "seconds": 96.4,
+      "evidence": [
+        "no bot entered combat: the pull started no fight",
+        "reply: TBM:ACTION_ERR|pull|unreachable|The tank could not start moving to a firing position for the pull."
+      ],
+      "metrics": {
+        "samples": 74
+      }
+    }
+  ],
+  "teardown": {
+    "steps": [
+      "stop_attack: ok",
+      "kill leftovers: ok",
+      ".gm on: ok",
+      "safe spot: ok"
+    ],
+    "result": "kept in world"
+  },
+  "commands": [
+    ".gm on",
+    ".gm on",
+    ".tele ulda",
+    ".gm off",
+    "teleport (-236.4, 60.4, -46.0) map 70",
+    ".bot action pull",
+    ".gm on",
+    ".gm on",
+    ".tele ulda"
+  ]
+}

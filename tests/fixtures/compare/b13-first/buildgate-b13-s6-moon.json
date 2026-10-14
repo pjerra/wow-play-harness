@@ -1,0 +1,43 @@
+{
+  "gate": "tortoisebots-buildgate",
+  "label": "b13-s6-moon",
+  "character": "Tagentone",
+  "started": "2026-10-12T15:12:36+00:00",
+  "seconds": 16.2,
+  "verdict": "inconclusive",
+  "scenarios": [
+    {
+      "name": "moon_sheep_lands",
+      "verdict": "inconclusive",
+      "seconds": 14.6,
+      "evidence": [
+        "setup: no live pack [4852, 4852] within 8 yd of (-168.7, 70.7, -48.3) map 70 after .respawn"
+      ],
+      "metrics": {}
+    }
+  ],
+  "teardown": {
+    "steps": [
+      "stop_attack: ok",
+      "kill leftovers: ok",
+      ".gm on: ok",
+      "safe spot: ok"
+    ],
+    "result": "kept in world"
+  },
+  "commands": [
+    ".gm on",
+    ".gm on",
+    ".tele ulda",
+    ".gm off",
+    "teleport (-208.0, 63.0, -46.0) map 70",
+    ".bot summon Dutroth",
+    ".bot summon Hucro",
+    ".bot summon Sorbraed",
+    ".bot summon Brenigria",
+    ".respawn",
+    ".gm on",
+    ".gm on",
+    ".tele ulda"
+  ]
+}
